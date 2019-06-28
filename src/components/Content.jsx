@@ -9,7 +9,7 @@ const Content = (props) => {
             <button onClick={() => props.onIncrement(1)}>increment</button>
         </Alert>
         <Alert>
-          <button onClick={() => {props.data.map((data) => {return data})}}> data </button>
+          <button onClick={() => {props.data.map((data) =>  data)}}> data </button>
         </Alert>
         <Alert color="primary">
             <button onClick={() => props.onDecrement(-1)}>decrement</button>

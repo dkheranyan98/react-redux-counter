@@ -19,7 +19,7 @@ export const decrementCounter = (numb) => ({
 })
 
 export const setFetchedData = (data) => ({
-    type: '',
+    type: types.fetchData,
     payload: {
         data,
     }
