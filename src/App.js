@@ -14,7 +14,7 @@ function App(props) {
   return (
     <Container fluid>
       <Header counter={props.counter} />
-      <Content onDecrement={props.onDecrement} onIncrement={props.onIncrement} onFetchData={props.onFetchData} data={props.data}/>
+      <Content onDecrement={props.onDecrement} onIncrement={props.onIncrement} onFetchData={props.onFetchData}/>
     </Container>
   );
 }
@@ -30,7 +30,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onIncrement: (numb) => dispatch(incrementCounter(numb)),
     onDecrement: (numb) => dispatch(decrementCounter(numb)),
-    onFetchData: () => dispatch(fetchData())
+    onFetchData: () => dispatch(fetchData()),
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);
