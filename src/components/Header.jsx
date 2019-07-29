@@ -1,4 +1,5 @@
 import React  from 'react';
+import { connect } from 'react-redux';
 import {
     Navbar,
     NavbarBrand,
@@ -12,4 +13,10 @@ function Header(props) {
     )
 }
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+      counter: state.counter.counter
+    }
+  }
+
+  export default connect(mapStateToProps)(Header);
